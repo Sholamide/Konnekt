@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:id="@+id/relativeLayout"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@drawable/blurredpage"
+                                             tools:context="com.example.konnekt.registerlogin.LoginActivity">
+
+
+    <ImageView
+            android:id="@+id/appLogo"
+            android:layout_width="236dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="94dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/imagelogo" android:layout_marginLeft="80dp" android:layout_marginRight="94dp"/>
+
+    <EditText
+            android:id="@+id/loginemailPrompt"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="-13dp"
+            android:layout_marginTop="58dp"
+            android:layout_marginEnd="-27dp"
+            android:background="@drawable/textviewborder"
+            android:drawableStart="@drawable/ic_action_email"
+            android:ems="10"
+            android:autofillHints=""
+            android:importantForAutofill="no"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColorLink="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/appLogo"
+            app:layout_constraintStart_toStartOf="@+id/appLogo"
+            app:layout_constraintTop_toBottomOf="@+id/appLogo" android:drawableLeft="@drawable/ic_action_email"
+            android:layout_marginLeft="-13dp" android:layout_marginRight="-27dp"/>
+
+    <EditText
+            android:id="@+id/signupemailPrompt"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="-4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="1dp"
+            android:autofillHints=""
+            android:importantForAutofill="no"
+            android:background="@drawable/textviewborder"
+            android:drawableStart="@drawable/ic_action_password"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/loginemailPrompt"
+            app:layout_constraintStart_toStartOf="@+id/loginemailPrompt"
+            app:layout_constraintTop_toBottomOf="@+id/loginemailPrompt" android:layout_marginLeft="-4dp"
+            android:layout_marginRight="1dp" android:drawableLeft="@drawable/ic_action_password"/>
+
+    <TextView
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/forgot_password"
+            android:textColor="@color/textColor"
+            app:layout_constraintEnd_toEndOf="@+id/loginValidation"
+            app:layout_constraintStart_toStartOf="@+id/loginValidation"
+            app:layout_constraintTop_toBottomOf="@+id/loginValidation" />
+
+    <Button
+            android:id="@+id/loginValidation"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/loginbackground"
+            android:text="@string/login"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/signupemailPrompt"
+            app:layout_constraintTop_toBottomOf="@+id/signupemailPrompt" android:layout_marginRight="8dp"/>
+
+    <TextView
+            android:id="@+id/signUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:autofillHints=""
+            android:importantForAutofill="no"
+            android:ems="10"
+            android:hint="@string/createnewaccount"
+            android:text="@string/don_t_have_an_account_sign_up"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/signupemailPrompt"
+            app:layout_constraintStart_toStartOf="@+id/signupemailPrompt"
+            app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
+
+    <TextView
+            android:id="@+id/loginOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/you_can_also_login_using"
+            android:textColor="@color/textColor3"
+            app:layout_constraintEnd_toEndOf="@+id/signUp"
+            app:layout_constraintStart_toStartOf="@+id/signUp"
+            app:layout_constraintTop_toBottomOf="@+id/signUp" />
+
+    <ImageView
+            android:id="@+id/facebooklogin"
+            android:layout_width="64dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintStart_toStartOf="@+id/loginOptions"
+            app:layout_constraintTop_toBottomOf="@+id/loginOptions"
+            app:srcCompat="@drawable/flogo" />
+
+    <ImageView
+            android:id="@+id/googleLogin"
+            android:layout_width="67dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="@+id/loginOptions"
+            app:layout_constraintStart_toEndOf="@+id/facebooklogin"
+            app:layout_constraintTop_toBottomOf="@+id/loginOptions"
+            app:srcCompat="@drawable/glogo" />
+
+
+</android.support.constraint.ConstraintLayout>
